@@ -17,6 +17,7 @@ leackcanry
 blockcanry
 dolaameng
 x2c
+eventbus
 
 
 
@@ -29,6 +30,32 @@ x2c
 3.
 
 在主线程打印堆栈，很耗时，怎么解决？
+子线程，
+子线程打印的时候，可能不是当时的堆栈了怎么办？
+提前打印，比如anr 是 5s，4s 的时候就应该打印了。
+
+
+为什么要双亲委派模型？
+recycleView 和 listView 具体区别。
+
+
 Anr trace 只具有参考意思。
+handler 怎么实现的延迟多少秒去执行消息？
+            nativePollOnce(ptr, nextPollTimeoutMillis);
+			
+			有一个队列，当发现下一个消息是延迟消息，那么nativePullOnce 的时候，传的第二个参数，就是下次Poll的时间，就是你的延迟时间。
+
+threadpool 怎么回收，怎么使用？
+静态的一个链表
+处理完一个消息，就会回收，            msg.recycleUnchecked();
+只是你没有源码，看不到引用。
+
+        // Allow overriding a threshold with a system prop. e.g.
+        // adb shell 'setprop log.looper.1000.main.slow 1 && stop && start'
+
+
+如果正在执行一个消息，可以放进去消息吗？
+java 内存模型
 
 你听说打工皇帝在微软干了7年，所以你也想在当前的公司干七年。那么首先你的公司并不是微软啊。
+
