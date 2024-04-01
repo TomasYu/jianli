@@ -1,5 +1,7 @@
 android 资源查找的方式，
 插件化 9.0  api限制
+https://weishu.me/2018/06/07/free-reflection-above-android-p/
+就是Hook
 
 
 热修复一个dex 里面 只有一个类，但是没有他引用的类，能加载出来吗？
